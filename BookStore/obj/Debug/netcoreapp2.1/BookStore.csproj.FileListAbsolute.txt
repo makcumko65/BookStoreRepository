@@ -82,3 +82,4 @@ D:\Git\BookStore\BookStore\obj\Debug\netcoreapp2.1\BookStore.Views.pdb
 D:\Git\BookStore\BookStore\obj\Debug\netcoreapp2.1\BookStore.dll
 D:\Git\BookStore\BookStore\obj\Debug\netcoreapp2.1\BookStore.pdb
 D:\Git\BookStore\BookStore\obj\Debug\netcoreapp2.1\BookStore.csproj.CopyComplete
+D:\Git\BookStore\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Books\Buy.g.cshtml.cs
