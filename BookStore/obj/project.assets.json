@@ -12536,11 +12536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\BookStore\\BookStore\\BookStore.csproj",
+      "projectUniqueName": "D:\\Git\\BookStoreRepository\\BookStore\\BookStore.csproj",
       "projectName": "BookStore",
-      "projectPath": "D:\\Git\\BookStore\\BookStore\\BookStore.csproj",
+      "projectPath": "D:\\Git\\BookStoreRepository\\BookStore\\BookStore.csproj",
       "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\BookStore\\BookStore\\obj\\",
+      "outputPath": "D:\\Git\\BookStoreRepository\\BookStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -32,7 +32,29 @@ namespace BookStore.Controllers
             }
             return View(cart.Lines);
         }
-
+        [HttpGet]
+        public IActionResult BuyAll()
+        {
+            return View();
+        }
+        [HttpPost]
+        public string BuyAll(Purchase purchase)
+        {
+            List< Purchase> purchases = new List<Purchase>();
+            foreach(CartLine carline1 in cart.Lines)
+            {
+                purchases.Add(new Purchase() { User = purchase.User,
+                                                Address = purchase.Address,
+                                                ContactPhone = purchase.ContactPhone,
+                                                BookId = carline1.Book.Id});
+            }
+            foreach (var item in purchases)
+            {
+                _context.Purchase.Add(item);
+                _context.SaveChanges();
+            }
+            return "Thanks, " + purchase.User;
+        }
 
 
         //public RedirectToRouteResult RemoveFromCart(int gameId, string returnUrl)
