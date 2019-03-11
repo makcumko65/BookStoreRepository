@@ -1,0 +1,41 @@
+﻿@model List<CartLine>
+@{
+    ViewBag.Title = "BookStore: your cart";
+}
+
+<h2>Your cart</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th class="text-right">Genre</th>
+            <th class="text-right">Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model)
+        {
+        <tr>
+            <td>@line.Book.Name</td>
+            <td>@line.Book.Author</td>
+            <td>@line.Book.Genre</td>
+            <td>@line.Book.Year</td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+
+        </tr>
+        <tr>
+            <td colspan="3" class="text-right">Buy all</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a href="~/Books/Index/">Продолжить покупки</a>
+</div>
+
