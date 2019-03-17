@@ -107,7 +107,6 @@ D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Books\D
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Books\Details.g.cshtml.cs
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Books\Edit.g.cshtml.cs
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Books\Index.g.cshtml.cs
-D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Cart\AddToCart.g.cshtml.cs
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
@@ -130,3 +129,4 @@ D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\BookStore.dll
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\BookStore.pdb
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\BookStore.csproj.CopyComplete
 D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Cart\BuyAll.g.cshtml.cs
+D:\Git\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Cart.g.cshtml.cs

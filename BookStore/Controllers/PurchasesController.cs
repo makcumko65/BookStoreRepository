@@ -21,7 +21,7 @@ namespace BookStore.Controllers
         // GET: Purchases
         public async Task<IActionResult> Index()
         {
-            var bookStoreContext = _context.Purchase.Include(p => p.book);
+            var bookStoreContext = _context.Purchase.Include(p => p.Book);
             return View(await bookStoreContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace BookStore.Controllers
             }
 
             var purchase = await _context.Purchase
-                .Include(p => p.book)
+                .Include(p => p.Book)
                 .FirstOrDefaultAsync(m => m.PurchaseId == id);
             if (purchase == null)
             {
@@ -130,7 +130,7 @@ namespace BookStore.Controllers
             }
 
             var purchase = await _context.Purchase
-                .Include(p => p.book)
+                .Include(p => p.Book)
                 .FirstOrDefaultAsync(m => m.PurchaseId == id);
             if (purchase == null)
             {

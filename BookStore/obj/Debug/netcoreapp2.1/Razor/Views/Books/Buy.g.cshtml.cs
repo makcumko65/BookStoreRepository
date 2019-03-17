@@ -66,7 +66,7 @@ using BookStore.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(98, 44, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88b519931ed2442191866729d609e8b0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0906af9eb994beda9526e6a676d6a1e", async() => {
                 BeginContext(104, 31, true);
                 WriteLiteral("\r\n    <title>Purchase</title>\r\n");
                 EndContext();
@@ -86,12 +86,12 @@ using BookStore.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(144, 808, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d23f02b902214021b27b44074a848053", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4dad624d73654c4ea08e603eee4b2fe8", async() => {
                 BeginContext(150, 93, true);
                 WriteLiteral("\r\n    <div>\r\n        <h3>Purchase</h3>\r\n        <p>Fill in the following fields</p>\r\n        ");
                 EndContext();
                 BeginContext(243, 688, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92b274748739455b912082dfbf388489", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64209a0ab05e4e7293b31eb354b252df", async() => {
                     BeginContext(263, 34, true);
                     WriteLiteral("\r\n            <input type=\"hidden\"");
                     EndContext();

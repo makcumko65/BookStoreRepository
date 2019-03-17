@@ -17,7 +17,7 @@ namespace BookStore.Models
         //public DateTime ReleaseDate { get; set; }
 
         public int BookId { get; set; } // ссылка на связанную модель Phone
-        public Book book { get; set; }
+        public Book Book { get; set; }
     }
 
 }

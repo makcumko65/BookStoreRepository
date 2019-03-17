@@ -15,22 +15,25 @@ namespace BookStore.Controllers
         {
             _context = context;
         }
-
-        [HttpGet]
-        public IActionResult AddToCart(int Id)
+        public IActionResult Cart()
+        {
+            return View(cart.Lines);
+        }
+    
+        public RedirectToRouteResult AddToCart(int Id)
         {
             Book game = _context.Book
                 .FirstOrDefault(g => g.Id == Id);
-
-            if (game != null)
+            if (game != null/* && cart.lineCollection.Last().Book.Id != Id*/)
             {
                 cart.AddItem(game, 1);
             }
-            else
-            {
-                throw new Exception("dadadadada");
-            }
-            return View(cart.Lines);
+            //else
+            //{
+            //    continue;
+            //    throw new Exception("dadadadada");
+            //}
+            return RedirectToRoute(new { controller = "Books", action = "Index" });
         }
         [HttpGet]
         public IActionResult BuyAll()
@@ -53,6 +56,8 @@ namespace BookStore.Controllers
                 _context.Purchase.Add(item);
                 _context.SaveChanges();
             }
+            cart.Clear();
+            
             return "Thanks, " + purchase.User;
         }
 

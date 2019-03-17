@@ -66,7 +66,7 @@ using BookStore.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(71, 44, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e6d4b1ecb3e4f14b19a037f2803a7fa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "850ed0bef3e847fdb69b5620822576e1", async() => {
                 BeginContext(77, 31, true);
                 WriteLiteral("\r\n    <title>Purchase</title>\r\n");
                 EndContext();
@@ -86,12 +86,12 @@ using BookStore.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(117, 747, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e166b2e09ea4ebda5998fb0b7866640", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f642c63d3b44b7ebd9849f116b36852", async() => {
                 BeginContext(123, 93, true);
                 WriteLiteral("\r\n    <div>\r\n        <h3>Purchase</h3>\r\n        <p>Fill in the following fields</p>\r\n        ");
                 EndContext();
                 BeginContext(216, 627, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12866322f8c4473bb603e79442ffa35a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38085b8dd8d048df859fd77f16dcbe63", async() => {
                     BeginContext(236, 600, true);
                     WriteLiteral(@"
             

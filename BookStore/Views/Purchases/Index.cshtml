@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.ContactPhone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.book)
+                @Html.DisplayNameFor(model => model.Book)
             </th>
             <th></th>
         </tr>
@@ -40,7 +40,7 @@
                 @Html.DisplayFor(modelItem => item.ContactPhone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.book.Id)
+                @Html.DisplayFor(modelItem => item.Book.Id )
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PurchaseId">Edit</a> |

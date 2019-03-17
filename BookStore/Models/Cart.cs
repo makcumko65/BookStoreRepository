@@ -11,8 +11,10 @@ namespace BookStore.Models
 
         public void AddItem(Book book, int quantity)
         {
-            CartLine line = new CartLine(book, quantity);
-
+            //CartLine line = new CartLine(book, quantity);
+            CartLine line = lineCollection
+                .Where(g => g.Book.Id == book.Id)
+                .FirstOrDefault();
             if (line == null)
             {
                 lineCollection.Add(new CartLine
@@ -23,7 +25,6 @@ namespace BookStore.Models
             }
             else
             {
-                lineCollection.Add(line);
                 line.Quantity += quantity;
             }
         }
