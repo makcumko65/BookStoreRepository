@@ -35,19 +35,7 @@ namespace BookStore.Controllers
         //    }
         //    return View(cart.Lines);
         //}
-        [HttpGet]
-        public IActionResult Buy(int id)
-        {
-            ViewBag.BookId = id;
-            return View();
-        }
-        [HttpPost]
-        public string Buy(Purchase purchase)
-        {
-            _context.Purchase.Add(purchase);
-            _context.SaveChanges();
-            return "Thanks, " + purchase.User;
-        }
+        
             // GET: Books
             public async Task<IActionResult> Index()
         {

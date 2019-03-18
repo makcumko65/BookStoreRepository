@@ -51,9 +51,11 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a href="~/Cart/AddToCart/@item.Id">AddToCart</a>
+                <a class="btn btn-success" href="~/Cart/AddToCart/@item.Id">AddToCart</a>
             </td>
-            <td><a href="~/Books/Buy/@item.Id">Buy</a></td>
+            <td>
+                <a class="btn btn-success" href="~/Purchases/Buy/@item.Id">Buy</a>
+            </td>
 
 
             <td>

@@ -10,9 +10,10 @@
             <tr>
                 <th>Name</th>
                 <th>Author</th>
-                <th class="text-left">Genre</th>
-                <th class="text-left">Year</th>
-                <th class="text-left">Quantity</th>
+                <th >Genre</th>
+                <th >Year</th>
+                <th >Quantity</th>
+                <th >Price</th>
             </tr>
         </thead>
         <tbody>
@@ -21,23 +22,24 @@
             <tr>
                 <td>@line.Book.Name</td>
                 <td>@line.Book.Author</td>
-                <td class="text-left">@line.Book.Genre</td>
-                <td class="text-left">@line.Book.Year</td>
-                <td class="text-left">@line.Quantity</td>
+                <td>@line.Book.Genre</td>
+                <td>@line.Book.Year</td>
+                <td>@line.Quantity</td>
+                <td >@(line.Book.Price *line.Quantity)</td>
             </tr>
             }
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="3" class="text-right">Total:</td>
+                <td colspan="3" class="text-right">Total: @Cart.TotalPrice</td>
 
             </tr>
             <tr>
-                <td colspan="3" class="text-right">  <a href="~/Cart/BuyAll/">Buy all</a></td>
+                <td colspan="3" class="text-right">  <a class="btn btn-success" href="~/Cart/BuyAll/">Buy all</a></td>
             </tr>
         </tfoot>
     </table>
 
     <div class="text-center">
-        <a href="~/Books/Index/">Continue</a>
+        <a class="btn btn-success" href="~/Books/Index/">Continue</a>
     </div>

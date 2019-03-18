@@ -1,6 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <style>
+        
+        .body-content {
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .buy {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.4s ease-in-out;
+            border-radius: 10px;
+            color: #EC4D3C;
+            background-color: white;
+            background-image: -webkit-radial-gradient(#FCD2D1 2px, rgba(255,0,0,0) 2px);
+            background-image: radial-gradient(#FCD2D1 2px, transparent 2px);
+            background-size: 12px 12px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+        }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BookStore</title>
@@ -26,11 +52,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">BookStore</a>
+                <a asp-area="" asp-controller="Books" asp-action="Index" class="navbar-brand">BookStore</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li ><a asp-area="" asp-controller="Books" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Cart" asp-action="Cart">Cart</a></li>

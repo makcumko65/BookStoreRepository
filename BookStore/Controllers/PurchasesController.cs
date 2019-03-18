@@ -17,6 +17,24 @@ namespace BookStore.Controllers
         {
             _context = context;
         }
+        [HttpGet]
+        public IActionResult Buy(int id)
+        {
+            ViewBag.BookId = id;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Buy(Purchase purchase)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(purchase);
+                _context.SaveChanges();
+                return View("Bought", purchase);
+            }
+
+            return View();
+        }
 
         // GET: Purchases
         public async Task<IActionResult> Index()

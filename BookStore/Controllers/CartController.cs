@@ -11,6 +11,7 @@ namespace BookStore.Controllers
     {
         private readonly BookStoreContext _context;
         static Cart cart = new Cart();
+        
         public CartController(BookStoreContext context)
         {
             _context = context;
@@ -41,7 +42,7 @@ namespace BookStore.Controllers
             return View();
         }
         [HttpPost]
-        public string BuyAll(Purchase purchase)
+        public IActionResult BuyAll(Purchase purchase)
         {
             List< Purchase> purchases = new List<Purchase>();
             foreach(CartLine carline1 in cart.Lines)
@@ -53,12 +54,23 @@ namespace BookStore.Controllers
             }
             foreach (var item in purchases)
             {
-                _context.Purchase.Add(item);
-                _context.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    _context.Add(item);
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    return View();
+                }
+
+                
             }
+             
             cart.Clear();
             
-            return "Thanks, " + purchase.User;
+            
+            return View("BoughtAll",purchase);
         }
 
 

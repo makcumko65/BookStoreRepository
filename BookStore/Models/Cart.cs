@@ -8,9 +8,10 @@ namespace BookStore.Models
     public class Cart
     {
         public List<CartLine> lineCollection = new List<CartLine>();
-
+        public static int TotalPrice {get;set;}
         public void AddItem(Book book, int quantity)
         {
+            TotalPrice += book.Price;
             //CartLine line = new CartLine(book, quantity);
             CartLine line = lineCollection
                 .Where(g => g.Book.Id == book.Id)
@@ -41,6 +42,7 @@ namespace BookStore.Models
         //}
         public void Clear()
         {
+            TotalPrice = 0;
             lineCollection.Clear();
         }
 
