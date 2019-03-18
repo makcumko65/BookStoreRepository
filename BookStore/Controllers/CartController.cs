@@ -61,7 +61,8 @@ namespace BookStore.Controllers
                 }
                 else
                 {
-                    return View();
+                    cart.Clear();
+                    return View("BoughtAll", purchase);
                 }
 
                 

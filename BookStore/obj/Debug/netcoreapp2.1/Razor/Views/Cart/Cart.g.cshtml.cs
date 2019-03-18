@@ -164,7 +164,7 @@ using BookStore.Models;
             WriteLiteral("</td>\r\n\r\n            </tr>\r\n            <tr>\r\n                <td colspan=\"3\" class=\"text-right\">  ");
             EndContext();
             BeginContext(1022, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53c415217df64e96b9dd0e22d9aeccf7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f4c4d0155e0b4bfca0b943e29406b987", async() => {
                 BeginContext(1071, 7, true);
                 WriteLiteral("Buy all");
                 EndContext();
@@ -186,7 +186,7 @@ using BookStore.Models;
             WriteLiteral("</td>\r\n            </tr>\r\n        </tfoot>\r\n    </table>\r\n\r\n    <div class=\"text-center\">\r\n        ");
             EndContext();
             BeginContext(1181, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5be09b8371eb4cd2a4b6817294e89ef7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "681c18618c264b0cb8fdc1fdb988ed01", async() => {
                 BeginContext(1230, 8, true);
                 WriteLiteral("Continue");
                 EndContext();
