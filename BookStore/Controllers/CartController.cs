@@ -74,17 +74,17 @@ namespace BookStore.Controllers
         }
 
 
-        //public RedirectToRouteResult RemoveFromCart(int gameId, string returnUrl)
-        //{
-        //    Game game = repository.Games
-        //        .FirstOrDefault(g => g.GameId == gameId);
+        public IActionResult RemoveFromCart(int Id)
+        {
+            Book book = _context.Book
+                .FirstOrDefault(g => g.Id == Id);
 
-        //    if (game != null)
-        //    {
-        //        GetCart().RemoveLine(game);
-        //    }
-        //    return RedirectToAction("Index", new { returnUrl });
-        //}
+            if (book != null)
+            {
+                cart.RemoveLine(book);
+            }
+            return Redirect("/Cart/Cart");
+        }
 
 
     }

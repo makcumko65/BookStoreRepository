@@ -32,8 +32,27 @@ namespace BookStore.Models
 
         public void RemoveLine(Book book)
         {
-            lineCollection.RemoveAll(l => l.Book.Id == book.Id);
-        }
+            foreach (CartLine cartline in lineCollection)
+            {
+                if (cartline.Book.Id == book.Id)
+                {
+                    if (cartline.Quantity > 1)
+                    {
+                        cartline.Quantity -= 1;
+                        TotalPrice -= cartline.Book.Price;
+                        return;
+                    }
+                    else
+                    {
+                        TotalPrice -= cartline.Book.Price;
+                        lineCollection.RemoveAll(l => l.Book.Id == book.Id);
+                        return;
+                    }
+                }
+            }
+            //
+            //lineCollection.RemoveAll(l => l.Book.Id == book.Id);
+       }
 
         //public decimal ComputeTotalValue()
         //{

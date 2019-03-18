@@ -14,6 +14,7 @@
                 <th >Year</th>
                 <th >Quantity</th>
                 <th >Price</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +26,11 @@
                 <td>@line.Book.Genre</td>
                 <td>@line.Book.Year</td>
                 <td>@line.Quantity</td>
-                <td >@(line.Book.Price *line.Quantity)</td>
+                <td>@(line.Book.Price * line.Quantity)</td>
+                <td>
+                    <a class="btn btn-success" href="~/Cart/RemoveFromCart//@line.Book.Id">RemoveLine</a>
+                </td>
+
             </tr>
             }
         </tbody>
