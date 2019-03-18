@@ -36,11 +36,24 @@ namespace BookStore.Controllers
         //    return View(cart.Lines);
         //}
         
-            // GET: Books
-            public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Book.ToListAsync());
+            var books = from m in _context.Book
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(await books.ToListAsync());
         }
+    
+        //    // GET: Books
+        //    public async Task<IActionResult> Index()
+        //{
+        //    return View(await _context.Book.ToListAsync());
+        //}
 
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
