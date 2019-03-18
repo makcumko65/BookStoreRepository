@@ -27,7 +27,7 @@ namespace BookStore.Controllers
                 .FirstOrDefault(g => g.Id == Id);
             if (game != null/* && cart.lineCollection.Last().Book.Id != Id*/)
             {
-                cart.AddItem(game, 1);
+                cart.AddItem(game, 1);   
             }
             //else
             //{
