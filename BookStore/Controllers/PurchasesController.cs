@@ -30,6 +30,8 @@ namespace BookStore.Controllers
             {
                 _context.Add(purchase);
                 _context.SaveChanges();
+                //return View(purchase);
+
                 return View("Bought", purchase);
             }
 

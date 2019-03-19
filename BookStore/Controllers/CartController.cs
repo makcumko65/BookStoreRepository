@@ -52,19 +52,21 @@ namespace BookStore.Controllers
                                                 ContactPhone = purchase.ContactPhone,
                                                 BookId = carline1.Book.Id});
             }
-            foreach (var item in purchases)
+            foreach (Purchase item in purchases)
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
+
                     _context.Add(item);
                     _context.SaveChanges();
+                    
                 }
                 else
                 {
                     return View();
                 }
 
-                
+
             }
              
             cart.Clear();

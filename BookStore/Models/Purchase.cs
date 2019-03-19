@@ -10,14 +10,14 @@ namespace BookStore.Models
     public class Purchase
     {
         public int PurchaseId { get; set; }
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "Invalid name")]
         [Required]
-        [StringLength(30)]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "The length of the string must be from 3 to 50 characters.")]
         public string User { get; set; }
         public string Address { get; set; }
         [DataType(DataType.PhoneNumber)]
         [Required]
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Invalid Phone")]
         public string ContactPhone { get; set; }
         //[DataType(DataType.Time)]
         //public DateTime ReleaseDate { get; set; }
