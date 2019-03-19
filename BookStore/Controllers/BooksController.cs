@@ -35,10 +35,28 @@ namespace BookStore.Controllers
         //    }
         //    return View(cart.Lines);
         //}
+        public async Task<IActionResult> Purchases()
+        {
+            //var result = from person in _context.Purchase
+            //             join detail in _context.Book on person.BookId equals detail.Id into Details
+            //             from m in Details.DefaultIfEmpty()
+            //             select new
+            //             {
+            //                 id = person.User,
+            //                 firstname = person.Address,
+            //                 lastname = person.ContactPhone,
+            //                 detailText = m.Name
+            //             };
+            var purchases = from m in _context.Purchase
+                            select m;
+            return View(await purchases.ToListAsync());
+
+        }
 
         // GET: Books
         public async Task<IActionResult> Index(string searchString)
         {
+
             var books = from m in _context.Book
                         select m;
 

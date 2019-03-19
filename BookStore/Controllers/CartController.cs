@@ -44,13 +44,35 @@ namespace BookStore.Controllers
         [HttpPost]
         public IActionResult BuyAll(Purchase purchase)
         {
+           
             List< Purchase> purchases = new List<Purchase>();
             foreach(CartLine carline1 in cart.Lines)
             {
+                //foreach (var item in _context.Book)
+                //{
+                //    if (carline1.Book.Id == item.Id)
+                //    {
+                //        purchase.BookName = item.Name;
+                //        break;
+                //    }
+                //}
                 purchases.Add(new Purchase() { User = purchase.User,
                                                 Address = purchase.Address,
                                                 ContactPhone = purchase.ContactPhone,
-                                                BookId = carline1.Book.Id});
+                                                BookId = carline1.Book.Id
+                });              
+            }
+            for (int i = 0; i < purchases.Count; i++)
+            {
+                foreach (var item in _context.Book)
+                {
+                    if (purchases[i].BookId == item.Id)
+                    {
+                        purchases[i].BookName = item.Name;
+                        break;
+                    }
+                }
+
             }
             foreach (Purchase item in purchases)
             {

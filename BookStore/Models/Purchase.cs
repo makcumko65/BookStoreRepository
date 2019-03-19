@@ -19,6 +19,7 @@ namespace BookStore.Models
         [Required]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Invalid Phone")]
         public string ContactPhone { get; set; }
+        public string BookName { get; set; }
         //[DataType(DataType.Time)]
         //public DateTime ReleaseDate { get; set; }
 

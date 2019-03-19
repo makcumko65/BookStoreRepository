@@ -26,6 +26,14 @@ namespace BookStore.Controllers
         [HttpPost]
         public IActionResult Buy(Purchase purchase)
         {
+            foreach(var item in _context.Book)
+            {
+                if(purchase.BookId == item.Id)
+                {
+                    purchase.BookName = item.Name;
+                    break;
+                }
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(purchase);
