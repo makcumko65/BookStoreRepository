@@ -70,7 +70,7 @@ namespace BookStore.Controllers
             }
              
             cart.Clear();
-            
+
             
             return View("BoughtAll",purchase);
         }

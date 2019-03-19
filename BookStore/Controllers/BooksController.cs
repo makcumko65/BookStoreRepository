@@ -18,7 +18,7 @@ namespace BookStore.Controllers
         {
             _context = context;
         }
-        
+
         //[HttpGet]
         //public IActionResult AddToCart(int Id)
         //{
@@ -35,11 +35,19 @@ namespace BookStore.Controllers
         //    }
         //    return View(cart.Lines);
         //}
-        
-            // GET: Books
-            public async Task<IActionResult> Index()
+
+        // GET: Books
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Book.ToListAsync());
+            var books = from m in _context.Book
+                        select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(await books.ToListAsync());
         }
 
         // GET: Books/Details/5

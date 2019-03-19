@@ -5,11 +5,18 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Books</h2>
+
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-controller="Books" asp-action="Index">
+    <p>
+        Book Title: <input type="text" name="SearchString">
+        <input type="submit" value="Search" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -51,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a class="btn btn-success" href="~/Cart/AddToCart/@item.Id">AddToCart</a>
+                <a class="btn btn-success" href="~/Cart/AddToCart/@item.Id">Add To Cart</a>
             </td>
             <td>
                 <a class="btn btn-success" href="~/Purchases/Buy/@item.Id">Buy</a>
