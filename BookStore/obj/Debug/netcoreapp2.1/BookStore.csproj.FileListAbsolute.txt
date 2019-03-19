@@ -176,3 +176,4 @@ D:\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\BookStore.dll
 D:\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\BookStore.pdb
 D:\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\BookStore.csproj.CopyComplete
 D:\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Books\Purchases.g.cshtml.cs
+D:\BookStoreRepository\BookStore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_UserLayout.g.cshtml.cs
